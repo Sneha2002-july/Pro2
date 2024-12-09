@@ -1,0 +1,54 @@
+package com.hospitalInformationSystem.doctorRegistration;
+
+public class Doctor {
+    private static int idCounter = 1;
+    private int id;
+    private String name;
+    private String contact;
+    private int age;
+    private String specialization;
+    private String startTime;
+    private String endTime;
+
+    public Doctor(String name, String contact, int age, String specialization, String startTime, String endTime) {
+        this.id = idCounter++;
+        this.name = name;
+        this.contact = contact;
+        this.age = age;
+        this.specialization = specialization;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public Object[] toArray() {
+        return new Object[]{id, name, contact, age, specialization, startTime, endTime};
+    }
+}
